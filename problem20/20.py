@@ -29,9 +29,9 @@ class Solution:
                 result = self.similar(pRoot1, pRoot2)
             #如果找不到，那么就再去root的左儿子当作起点，去判断时候包含Tree2
             if not result:
-                result = self.similar(pRoot1.left, pRoot2)
+                result = self.HasSubtree(pRoot1.left, pRoot2)
             #如果还找不到，那么就再去root的右儿子当作起点，去判断时候包含Tree2
             if not result:
-                result = self.similar(pRoot1.right, pRoot2)
+                result = self.HasSubtree(pRoot1.right, pRoot2)
         #返回结果
         return result
